@@ -1,0 +1,90 @@
+.register {
+  margin-top: 40px !important;
+}
+.register :hover {
+  cursor: pointer;
+}
+
+.fullPageStyles {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullPageStyles-contact {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+}
+
+.fullPageStylesDashboard {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullPageStylesAbout {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.para {
+  margin-left: 90px !important;
+  margin-right: 90px;
+  line-height: 1.8;
+  border: 2px solid lightblue;
+  padding: 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.subHeading h1 {
+  font-size: 48px;
+  font-weight: 600;
+}
+.subHeading {
+  margin-left: 60px;
+}
+
+.subHeading h3 {
+  font-size: xx-large;
+  font-weight: 500;
+}
+
+.shipment {
+  margin-left: 100px;
+  padding: 24px 50px;
+  border: 2px solid lightblue;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.login {
+  margin-top: 100px;
+}
+.register {
+  margin-top: 100px;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
