@@ -14,6 +14,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import theme from "./theme"; // Import the theme object
 import { ThemeProvider as CustomThemeProvider } from "./ThemeContext"; // Import the custom ThemeProvider
 import Service from "./components/Service";
+import { AnimatePresence, motion } from "framer-motion";
 
 function App() {
   return (

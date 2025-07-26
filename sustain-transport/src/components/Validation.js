@@ -1,9 +1,9 @@
 import * as Yup from "yup";
 
 export const loginValidationSchema = Yup.object({
-  username: Yup.string()
-    .matches(/^[a-zA-Z0-9]+$/, "Username must be alphanumeric")
-    .required("Required"),
+  email: Yup.string()
+    .email("Invalid email format")
+    .required("Email is required"),
   password: Yup.string()
     .matches(
       /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}/,
@@ -13,21 +13,19 @@ export const loginValidationSchema = Yup.object({
 });
 
 export const registerValidationSchema = Yup.object({
-  name: Yup.string().required("Required"),
-  email: Yup.string().email("Invalid email format").required("Required"),
+  name: Yup.string()
+    .required("Name is required")
+    .min(2, "Name must be at least 2 characters"),
+  email: Yup.string()
+    .email("Invalid email format")
+    .required("Email is required"),
   password: Yup.string()
     .matches(
       /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}/,
       "Must contain at least one number, one lowercase letter, one uppercase letter, one special character, and be at least eight characters long"
     )
-    .required("Required"),
+    .required("Password is required"),
   confirmPassword: Yup.string()
     .oneOf([Yup.ref("password"), null], "Passwords must match")
-    .required("Required"),
-  username: Yup.string()
-    .matches(/^[a-zA-Z0-9]+$/, "Username must be alphanumeric")
-    .required("Required"),
-  country: Yup.string().required("Required"),
-  phone: Yup.string().required("Required"),
-  location: Yup.string().required("Required"),
+    .required("Please confirm your password"),
 });
